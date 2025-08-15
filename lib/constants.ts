@@ -38,7 +38,7 @@ export enum AmenityEnum {
   Parking = "Parking",
   PetsAllowed = "PetsAllowed",
   WiFi = "WiFi",
-}
+};
 
 export const AmenityIcons: Record<AmenityEnum, LucideIcon> = {
   WasherDryer: Waves,
@@ -72,7 +72,7 @@ export enum HighlightEnum {
   CloseToTransit = "CloseToTransit",
   GreatView = "GreatView",
   QuietNeighborhood = "QuietNeighborhood",
-}
+};
 
 export const HighlightIcons: Record<HighlightEnum, LucideIcon> = {
   HighSpeedInternetAccess: Wifi,
@@ -99,7 +99,7 @@ export enum PropertyTypeEnum {
   Villa = "Villa",
   Townhouse = "Townhouse",
   Cottage = "Cottage",
-}
+};
 
 export const PropertyTypeIcons: Record<PropertyTypeEnum, LucideIcon> = {
   Rooms: Home,
