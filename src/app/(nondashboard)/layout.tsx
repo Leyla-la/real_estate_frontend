@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/navbar";
 import React, { useEffect, useState } from "react";
-import { NAVBAR_HEIGHT } from "../../../lib/constants";
+import { NAVBAR_HEIGHT } from "../../lib/constants";
 import { useGetAuthUserQuery } from "@/state/api";
 import { usePathname, useRouter } from "next/navigation";
 

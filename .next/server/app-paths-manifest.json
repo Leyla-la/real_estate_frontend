@@ -1,4 +1,8 @@
 {
   "/page": "app/page.js",
+<<<<<<< HEAD
+=======
+  "/(dashboard)/tenants/settings/page": "app/(dashboard)/tenants/settings/page.js",
+>>>>>>> 38cc39d (settings page)
   "/(dashboard)/tenants/favorites/page": "app/(dashboard)/tenants/favorites/page.js"
 }

@@ -2,9 +2,13 @@ self.__BUILD_MANIFEST = {
   "polyfillFiles": [
     "static/chunks/polyfills.js"
   ],
+<<<<<<< HEAD
   "devFiles": [
     "static/chunks/react-refresh.js"
   ],
+=======
+  "devFiles": [],
+>>>>>>> 38cc39d (settings page)
   "ampDevFiles": [],
   "lowPriorityFiles": [],
   "rootMainFiles": [
@@ -13,6 +17,7 @@ self.__BUILD_MANIFEST = {
   ],
   "rootMainFilesTree": {},
   "pages": {
+<<<<<<< HEAD
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -23,6 +28,9 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ]
+=======
+    "/_app": []
+>>>>>>> 38cc39d (settings page)
   },
   "ampFirstPages": []
 };

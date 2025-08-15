@@ -16,6 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/layout.js"
     ],
+<<<<<<< HEAD
+=======
+    "/(dashboard)/tenants/settings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/tenants/settings/page.css",
+      "static/chunks/app/(dashboard)/tenants/settings/page.js"
+    ],
+>>>>>>> 38cc39d (settings page)
     "/(dashboard)/tenants/favorites/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

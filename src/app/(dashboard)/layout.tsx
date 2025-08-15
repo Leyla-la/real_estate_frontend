@@ -2,13 +2,11 @@
 
 import Navbar from "@/components/navbar";
 import React, { useEffect, useState } from "react";
-import { NAVBAR_HEIGHT } from "../../../lib/constants";
+import { NAVBAR_HEIGHT } from "../../lib/constants";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import Sidebar from "../../components/app-sidebar";
 import { useGetAuthUserQuery } from "@/state/api";
 import { usePathname, useRouter } from "next/navigation";
-import { set } from "zod";
-
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 

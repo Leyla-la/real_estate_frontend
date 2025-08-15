@@ -17,7 +17,7 @@ import {
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { SidebarTrigger } from "./ui/sidebar";
-import { NAVBAR_HEIGHT } from "../../lib/constants";
+import { NAVBAR_HEIGHT } from "../lib/constants";
 
 const Navbar = () => {
   const { data: authUser } = useGetAuthUserQuery();
