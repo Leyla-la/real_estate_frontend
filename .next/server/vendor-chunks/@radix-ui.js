@@ -11,8 +11,6 @@ exports.id = "vendor-chunks/@radix-ui";
 exports.ids = ["vendor-chunks/@radix-ui"];
 exports.modules = {
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/@radix-ui/number/dist/index.mjs":
 /*!******************************************************!*\
   !*** ./node_modules/@radix-ui/number/dist/index.mjs ***!
@@ -23,7 +21,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/@radix-ui/primitive/dist/index.mjs":
 /*!*********************************************************!*\
   !*** ./node_modules/@radix-ui/primitive/dist/index.mjs ***!
@@ -154,8 +151,6 @@ eval("var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;\n__webpack_require
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/@radix-ui/react-label/dist/index.mjs":
 /*!***********************************************************!*\
   !*** ./node_modules/@radix-ui/react-label/dist/index.mjs ***!
@@ -166,7 +161,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/@radix-ui/react-menu/dist/index.mjs":
 /*!**********************************************************!*\
   !*** ./node_modules/@radix-ui/react-menu/dist/index.mjs ***!
@@ -227,8 +221,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/@radix-ui/react-select/dist/index.mjs":
 /*!************************************************************!*\
   !*** ./node_modules/@radix-ui/react-select/dist/index.mjs ***!
@@ -239,7 +231,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/@radix-ui/react-separator/dist/index.mjs":
 /*!***************************************************************!*\
   !*** ./node_modules/@radix-ui/react-separator/dist/index.mjs ***!
@@ -260,8 +251,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/@radix-ui/react-switch/dist/index.mjs":
 /*!************************************************************!*\
   !*** ./node_modules/@radix-ui/react-switch/dist/index.mjs ***!
@@ -272,7 +261,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/@radix-ui/react-tooltip/dist/index.mjs":
 /*!*************************************************************!*\
   !*** ./node_modules/@radix-ui/react-tooltip/dist/index.mjs ***!
@@ -343,8 +331,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/@radix-ui/react-use-previous/dist/index.mjs":
 /*!******************************************************************!*\
   !*** ./node_modules/@radix-ui/react-use-previous/dist/index.mjs ***!
@@ -355,7 +341,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/@radix-ui/react-use-size/dist/index.mjs":
 /*!**************************************************************!*\
   !*** ./node_modules/@radix-ui/react-use-size/dist/index.mjs ***!

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { SettingsFormData, settingsSchema } from "../lib/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +17,10 @@ const SettingsForm = ({
     defaultValues: initialData,
   });
 
+  useEffect(() => {
+    form.reset(initialData);
+  }, [initialData]);
+  
   const toggleEditMode = () => {
     setEditMode(!editMode);
     if (editMode) {
@@ -62,18 +66,18 @@ const SettingsForm = ({
               <Button
                 type="button"
                 onClick={toggleEditMode}
-                className="bg-secondary-500 text-white hover:bg-secondary-600"
-                          >
-                              {editMode ? "Cancel" : "Edit"}
-                          </Button>
-                          {editMode && (
-                            <Button
-                              type="submit"
-                              className="bg-primary-700 text-white hover:bg-primary-800"
-                            >
-                              Save Changes
-                            </Button>
-                          )}
+                className="!bg-secondary-500 !text-white hover:!bg-secondary-600 !border-0"
+              >
+                {editMode ? "Cancel" : "Edit"}
+              </Button>
+              {editMode && (
+                <Button
+                  type="submit"
+                  className="!bg-primary-700 !text-white hover:!bg-primary-800 !border-0"
+                >
+                  Save Changes
+                </Button>
+              )}
             </div>
           </form>
         </Form>

@@ -1,8 +1,5 @@
 import * as z from "zod";
-<<<<<<< HEAD:lib/schemas.ts
-=======
 import { PropertyTypeEnum } from "./constants";
->>>>>>> 38cc39d (settings page):src/lib/schemas.ts
 
 export const propertySchema = z.object({
   name: z.string().min(1, "Name is required"),

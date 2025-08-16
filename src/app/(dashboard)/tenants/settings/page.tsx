@@ -8,7 +8,7 @@ const TenantSettings = () => {
 
     const { data: authUser, isLoading } = useGetAuthUserQuery();
     const [updateTenant] = useUpdateTenantSettingsMutation();
-    
+    console.log("Auth User Data:", authUser);
     if (isLoading) return <>Loading...</>;
     if (!authUser || !authUser.userInfo) {
       return <>Error: User data not found.</>;

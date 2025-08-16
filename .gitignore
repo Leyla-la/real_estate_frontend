@@ -1,17 +1,24 @@
-# Thư mục chứa các dependencies đã cài đặt
-node_modules/
+**/node_modules/
+**/dist/
 
-# Thư mục build
-build/
-dist/
-out/
-
-# File môi trường
 .env
-.env.local
+client/.env.local
+client/.env.development
+client/.env.production
+server/.env
 
-# File log
-*.log
+client/.next/
 
-# File tạm
-*.tmp
+.DS_Store
+Thumbs.db
+
+.vscode/
+
+client/node_modules/
+server/node_modules/
+client/dist/
+server/dist/
+client/.env
+server/.env
+client/.next/
+node_modules

@@ -121,8 +121,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/chevron-down.js":
 /*!******************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/chevron-down.js ***!
@@ -133,7 +131,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/chevron-right.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/chevron-right.js ***!
@@ -144,8 +141,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/chevron-up.js":
 /*!****************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/chevron-up.js ***!
@@ -156,7 +151,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/cigarette.js":
 /*!***************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/cigarette.js ***!
@@ -357,8 +351,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/square-pen.js":
 /*!****************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/square-pen.js ***!
@@ -369,7 +361,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
->>>>>>> 38cc39d (settings page)
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/thermometer.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/thermometer.js ***!
