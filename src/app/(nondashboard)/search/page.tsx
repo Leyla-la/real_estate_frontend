@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 import FiltersBar from "./filters-bar";
 import FiltersFull from "./filters-full";
+import Map from "./map";
 import { cleanParams } from "@/lib/utils";
 import { setFilters } from "@/state";
 
@@ -56,7 +57,7 @@ const SearchPage = () => {
         >
           <FiltersFull />
         </div>
-        {/* <Map /> */}
+        <Map />
         <div className="basis-4/12 overflow-y-auto">{/* <Map /> */}</div>
       </div>
     </div>
