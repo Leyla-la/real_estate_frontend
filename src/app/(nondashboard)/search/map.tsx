@@ -47,7 +47,7 @@ const Map = () => {
     resizeMap();
 
     return () => map.remove();
-  });
+  }, [isLoading, isError, properties, filters.coordinates]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (isLoading) {
     return (
