@@ -134,7 +134,6 @@ export const api = createApi({
     }),
 
     // tenant related endpoints
-
     getCurrentResidences: build.query<Property[], string>({
       query: (cognitoId) => `tenants/${cognitoId}/current-residences`,
       providesTags: (result) =>
@@ -198,9 +197,39 @@ export const api = createApi({
       ],
     }),
 
+    //manager related endpoint
+
+    createProperty: build.mutation<Property, FormData>({
+      query: (newProperty) => ({
+        url: `properties`,
+        method: "POST",
+        body: newProperty,
+      }),
+      invalidatesTags: (result) => [
+        { type: "Properties", id: "LIST" },
+        { type: "Managers", id: result?.manager?.id },
+      ],
+    }),
+
+    getManagerProperties: build.query<Property[], string>({
+      query: (cognitoId) => `managers/${cognitoId}/properties`,
+      providesTags: (result) =>
+        result
+          ? [
+              ...result.map(({ id }) => ({ type: "Properties" as const, id })),
+              { type: "Properties", id: "LIST" },
+            ]
+          : [{ type: "Properties", id: "LIST" }],
+    }),
+
     //lease related endpoint
     getLeases: build.query<Lease[], number>({
       query: () => "leases",
+      providesTags: ["Leases"],
+    }),
+
+    getPropertyLeases: build.query<Lease[], number>({
+      query: (propertyId) => `properties/${propertyId}/leases`,
       providesTags: ["Leases"],
     }),
 
@@ -208,7 +237,6 @@ export const api = createApi({
       query: (leaseId) => `leases/${leaseId}/payments`,
       providesTags: ["Payments"],
     }),
-
   }),
 });
 
@@ -224,4 +252,7 @@ export const {
   useGetCurrentResidencesQuery,
   useGetLeasesQuery,
   useGetPaymentsQuery,
+  useGetManagerPropertiesQuery,
+  useGetPropertyLeasesQuery,
+  useCreatePropertyMutation
 } = api;
