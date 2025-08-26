@@ -3,70 +3,63 @@
 import Header from "@/components/header";
 import Loading from "@/components/loading";
 import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
   useGetPaymentsQuery,
   useGetPropertyLeasesQuery,
   useGetPropertyQuery,
 } from "@/state/api";
-import React from "react";
-import { useParams } from "next/navigation";
-import Link from "next/link";
 import { ArrowDownToLine, ArrowLeft, Check, Download } from "lucide-react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import React from "react";
 
 const PropertyTenants = () => {
   const { id } = useParams();
   const propertyId = Number(id);
-  const {
-    data: property,
-    isLoading: propertyLoading,
-    error: propertyError,
-  } = useGetPropertyQuery(propertyId, {
-    skip: !propertyId,
-  });
-  const {
-    data: leases,
-    isLoading: leasesLoading,
-    error: leasesError,
-  } = useGetPropertyLeasesQuery(propertyId, {
-    skip: !propertyId,
-  });
-  const {
-    data: payments,
-    isLoading: paymentsLoading,
-    error: paymentsError,
-  } = useGetPaymentsQuery(propertyId, {
-    skip: !propertyId,
-  });
+
+  const { data: property, isLoading: propertyLoading } =
+    useGetPropertyQuery(propertyId);
+  const { data: leases, isLoading: leasesLoading } =
+    useGetPropertyLeasesQuery(propertyId);
+  const { data: payments, isLoading: paymentsLoading } =
+    useGetPaymentsQuery(propertyId);
 
   if (propertyLoading || leasesLoading || paymentsLoading) return <Loading />;
 
-  if (propertyError || leasesError || paymentsError)
-    return <div>Error loading property details.</div>;
-
   const getCurrentMonthPaymentStatus = (leaseId: number) => {
     const currentDate = new Date();
-    const currentMonthPayment = payments?.find((payment) => {
-      payment.leaseId === leaseId &&
+    const currentMonthPayment = payments?.find(
+      (payment) =>
+        payment.leaseId === leaseId &&
         new Date(payment.dueDate).getMonth() === currentDate.getMonth() &&
-        new Date(payment.dueDate).getFullYear() === currentDate.getFullYear();
-    });
+        new Date(payment.dueDate).getFullYear() === currentDate.getFullYear()
+    );
     return currentMonthPayment?.paymentStatus || "Not Paid";
   };
 
   return (
     <div className="dashboard-container">
+      {/* Back to properties page */}
       <Link
-        href="managers/properties"
+        href="/managers/properties"
         className="flex items-center mb-4 hover:text-primary-500"
         scroll={false}
       >
-        <ArrowLeft className="mr-2 w-4 h-4" />
+        <ArrowLeft className="w-4 h-4 mr-2" />
         <span>Back to Properties</span>
       </Link>
+
       <Header
-        title={property?.name || "Manager Properties"}
-        subtitle="Manage tenants and leases for this property."
+        title={property?.name || "My Property"}
+        subtitle="Manage tenants and leases for this property"
       />
 
       <div className="w-full space-y-6">

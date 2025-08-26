@@ -26,22 +26,66 @@ const Listings = () => {
     } = useGetPropertiesQuery(filters);
 
     const handleFavoriteToggle = async (propertyId: number) => {
-      if (!authUser) return;
+      // 1. Kiểm tra xem hàm có được gọi không
+      console.log("--- handleFavoriteToggle được gọi ---");
+      console.log("propertyId nhận được:", propertyId);
+      console.log("Giá trị của authUser:", authUser);
+
+      if (!authUser) {
+        console.log("authUser không tồn tại, thoát khỏi handleFavoriteToggle.");
+        return;
+      }
+
+      // Log thông tin authUser chi tiết
+      console.log("authUser.cognitoInfo.userId:", authUser.cognitoInfo.userId);
+      console.log("Giá trị của tenant:", tenant);
+      console.log("Giá trị của tenant?.favorites:", tenant?.favorites);
 
       const isFavorite = tenant?.favorites?.some(
         (fav: Property) => fav.id === propertyId
       );
 
-      if (isFavorite) {
-        await removeFavorite({
-          cognitoId: authUser.cognitoInfo.userId,
-          propertyId,
-        });
-      } else {
-        await addFavorite({
-          cognitoId: authUser.cognitoInfo.userId,
-          propertyId,
-        });
+      // 2. Log trạng thái yêu thích hiện tại
+      console.log("isFavorite (trạng thái hiện tại):", isFavorite);
+
+      try {
+        if (isFavorite) {
+          // 3. Log thông tin trước khi gọi removeFavorite
+          console.log("Đang cố gắng XÓA khỏi yêu thích.");
+          console.log("Tham số cho removeFavorite:", {
+            cognitoId: authUser.cognitoInfo.userId,
+            propertyId,
+          });
+
+          await removeFavorite({
+            cognitoId: authUser.cognitoInfo.userId,
+            propertyId,
+          }).unwrap(); // Dùng .unwrap() để bắt lỗi ở đây
+
+          console.log("Xóa khỏi yêu thích thành công!");
+        } else {
+          // 4. Log thông tin trước khi gọi addFavorite
+          console.log("Đang cố gắng THÊM vào yêu thích.");
+          console.log("Tham số cho addFavorite:", {
+            cognitoId: authUser.cognitoInfo.userId,
+            propertyId,
+          });
+
+          await addFavorite({
+            cognitoId: authUser.cognitoInfo.userId,
+            propertyId,
+          }).unwrap(); // Dùng .unwrap() để bắt lỗi ở đây
+
+          console.log("Thêm vào yêu thích thành công!");
+        }
+      } catch (error) {
+        // 5. Bắt và log lỗi chi tiết từ mutation
+        console.error("Lỗi xảy ra trong handleFavoriteToggle:", error);
+        // Nếu bạn đang dùng toast, lỗi này sẽ được truyền vào hàm withToast của bạn.
+        // Kiểm tra cấu trúc của 'error' trong console.
+        // Ví dụ: console.error("Lỗi data:", error.data);
+        // console.error("Lỗi status:", error.status);
+        // console.error("Lỗi message:", error.message);
       }
     };
 

@@ -9,7 +9,8 @@ import { useCreateApplicationMutation, useGetAuthUserQuery } from '@/state/api';
 import { Button } from '@/components/ui/button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React from 'react'
-import { useForm, Form } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { Form } from "@/components/ui/form";
 
 const ApplicationModal = ({
   isOpen,
