@@ -91,7 +91,7 @@ declare global {
 
   interface ApplicationCardProps {
     application: Application;
-    userType: "manager" | "renter";
+    userType: "manager" | "tenant";
     children: React.ReactNode;
   }
 
